@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Reset interaction data in lmnh_museum, preserving all tables and reference data
+
+DB_NAME="${1:-lmnh_museum}"
+
+psql -v ON_ERROR_STOP=1 "${DB_NAME}" <<'SQL'
+BEGIN;
+
+TRUNCATE TABLE
+    request_interaction,
+    rating_interaction
+RESTART IDENTITY
+CASCADE;
+
+COMMIT;
+SQL
+
+echo "Interaction tables reset successfully in database: ${DB_NAME}"
