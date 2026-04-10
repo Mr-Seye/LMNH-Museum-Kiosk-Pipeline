@@ -19,22 +19,28 @@ The dashboard module connects to a Kafka topic containing kiosk interaction even
 Create a `.env` file with the following configuration:
 
 ```env
-AWS_ACCESS_KEY=
-AWS_SECRET_KEY=
-S3_BUCKET=
-DB_NAME=
-DB_HOST=
-DB_USERNAME=
-DB_PASSWORD=
+## AWS Details ##
+AWS_ACCESS_KEY=your-aws-access-key
+AWS_SECRET_KEY=your-aws-secret-key
+S3_BUCKET=s3-bucket-name
+
+## RDS Details ## 
+DB_NAME=database-name
+DB_HOST=database-host
+DB_USERNAME=database-username
+DB_PASSWORD=database-password
 DB_PORT=5432
-BOOTSTRAP_SERVERS=
-SECURITY_PROTOCOL=
-SASL_MECHANISM=
-USERNAME=
-PASSWORD=
-GROUP_ID=
-AUTO_OFFSET=
-TOPIC=
+
+## Kafka Details ##
+BOOTSTRAP_SERVERS=kafka-bootstrap
+SECURITY_PROTOCOL=SASL_SSL
+SASL_MECHANISM=PLAIN
+
+USERNAME=kafka-username
+PASSWORD=kafka-password
+GROUP_ID=target-group-id-name
+AUTO_OFFSET=latest/earliest
+TOPIC=kafka-topic-name
 ```
 
 These variables define access credentials for AWS, database connectivity, and Kafka configuration.
