@@ -105,5 +105,5 @@ terraform.tfvars
 .env
 *.env
 
-terraform/
-terraform/*
+terraform.tfstate
+terraform.tfstate*
