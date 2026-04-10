@@ -20,8 +20,8 @@ Create a `.env` file with the following configuration:
 
 ```env
 ## AWS Details ##
-AWS_ACCESS_KEY=your-aws-access-key
-AWS_SECRET_KEY=your-aws-secret-key
+AWS_ACCESS_KEY=your-access-key
+AWS_SECRET_KEY=your-secret-key
 S3_BUCKET=s3-bucket-name
 
 ## RDS Details ## 
