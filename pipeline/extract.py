@@ -9,8 +9,6 @@ from dotenv import load_dotenv
 from boto3 import client
 import csv
 import logging
-# from mypy_boto_s3.client import S3Client
-# from boto3 import client.S3
 
 logger = logging.getLogger(__name__)
 
